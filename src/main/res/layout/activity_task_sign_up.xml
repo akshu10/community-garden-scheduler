@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/taskSignUpUI"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".TaskSignUpActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:text="@string/unassigned_tasks"
+        android:textColor="@color/textColor"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/black" />
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:scrollbarThumbVertical="@color/logout_icon_color"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/black"
+        android:dividerHeight="3dp"
+        android:isScrollContainer="true"
+        tools:listitem="@layout/list_view_row_file" />
+
+</LinearLayout>

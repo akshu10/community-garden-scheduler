@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor">
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:gravity="center|start"
+        android:text="@string/task_type"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.008" />
+
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:gravity="center|start"
+        android:text="@string/unassigned"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.009" />
+
+    <TextView
+        android:id="@+id/dueDateTitle"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="2dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|start"
+        android:text="@string/due_on"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName"
+        app:layout_constraintVertical_bias="0.013" />
+
+    <TextView
+        android:paddingTop="2dp"
+        android:id="@+id/txtTime"
+        android:layout_width="137dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|end"
+        android:text="@string/mm_dd_yyyy"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.841"
+        app:layout_constraintStart_toEndOf="@+id/dueDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtStatus"
+        app:layout_constraintVertical_bias="0.011" />
+
+    <TextView
+        android:id="@+id/assigneeTitle"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|start"
+        android:text="@string/assignee"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:paddingTop="2dp"
+        android:id="@+id/txtAssignee"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|end"
+        android:text="@string/assignee"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.801"
+        app:layout_constraintStart_toEndOf="@+id/assigneeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtTime"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/assigneeTitle" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

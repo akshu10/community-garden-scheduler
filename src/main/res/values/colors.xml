@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <color name="colorPrimary">#17C3B2</color>
+    <color name="colorPrimaryDark">#0747A6</color>
+    <color name="button_color_2">#02111B</color>
+    <color name="text_color_2">#D3D3D3</color>
+    <color name="background_color_2">#001233</color>
+    <color name="textColor">#484D51</color>
+    <color name="button_color">#D1AA0D</color>
+    <color name="backgroundColor">#d8e2dc</color>
+    <color name="register_color">#76AA89</color>
+    <color name="logout_icon_color">#F1C40F</color>
+
+    <!--    DailyTasks Colors-->
+    <color name="green_color">#CEF2C4</color>
+    <color name="yellow_color">#EDD012</color>
+    <color name="yellow2_color">#FFFF00</color>
+    <color name="red_color">#FF776D</color>
+    <color name="red2_color">#FF1100</color>
+    <color name="blue2_color">#6AA1F3</color>
+    <color name="blue_color">#81A4DA</color>
+    <color name="black_color">#000000</color>
+
+</resources>

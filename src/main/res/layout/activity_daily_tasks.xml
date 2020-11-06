@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".activities.DailyTasksActivity"
+    android:background="@color/backgroundColor"
+
+    >
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:text="@string/todays_tasks"
+        android:fontFamily="@font/rajdhani_bold"
+        android:textColor="@color/textColor"
+        android:textSize="35sp" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="#000000" />
+
+    <ListView
+        android:id="@+id/tasks"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@color/logout_icon_color"
+        android:isScrollContainer="true"
+        android:divider="@android:color/black"
+        android:dividerHeight="3dp">
+
+    </ListView>
+
+</LinearLayout>

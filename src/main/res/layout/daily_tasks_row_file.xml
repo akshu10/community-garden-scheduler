@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="25"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.MainActivity">
+
+    <TextView
+        android:id="@+id/dailyTaskName"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:gravity="center|start"
+        android:text="@string/task_type"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.086"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="1dp"
+        android:layout_height="165dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/statusText"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dailyTaskName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="140dp"
+        android:layout_height="35dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:gravity="center|start"
+        android:paddingRight="0dp"
+        android:text="@string/unassigned"
+        android:textAlignment="center"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingEnd="0dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTaskName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dueDateTitle"
+        android:layout_width="65dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|start"
+        android:text="@string/due_on"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTaskName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/dueDateText"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|end"
+        android:paddingTop="3dp"
+        android:text="@string/mm_dd_yyyy"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.373"
+        app:layout_constraintStart_toEndOf="@+id/dueDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/dailyTaskName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_2"
+        android:fontFamily="@font/rajdhani_bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/uncancel_task"
+        android:textColor="@color/text_color_2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/dueDateText"
+        app:layout_constraintTop_toBottomOf="@+id/statusText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/completeDateTitle"
+        android:layout_width="120dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|start"
+        android:text="@string/completed_on"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/completeDateText"
+        android:layout_width="95dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|end"
+        android:paddingTop="3dp"
+        android:text="@string/mm_dd_yyyy"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toEndOf="@+id/completeDateTitle"
+        app:layout_constraintTop_toBottomOf="@+id/dueDateText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/completeButton"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_2"
+        android:fontFamily="@font/rajdhani_bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/unmark_complete"
+        android:textColor="@color/text_color_2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.26"
+        app:layout_constraintStart_toEndOf="@+id/completeDateText"
+        app:layout_constraintTop_toBottomOf="@+id/cancelButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/assigneeTitle"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|start"
+        android:text="@string/assignee"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/completeDateTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/assigneeText"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:gravity="center|end"
+        android:paddingTop="2dp"
+        android:text="@string/assignee"
+        android:textColor="@color/textColor"
+        android:textSize="19sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.02"
+        app:layout_constraintStart_toEndOf="@+id/assigneeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/completeDateTitle"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/assignButton"
+        android:layout_width="126dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/custom_button_2"
+        android:fontFamily="@font/rajdhani_bold"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:text="@string/unassign_to_me"
+        android:textColor="@color/text_color_2"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/assigneeText"
+        app:layout_constraintTop_toBottomOf="@+id/completeButton"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

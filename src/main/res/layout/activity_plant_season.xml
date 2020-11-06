@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/PlantSeason"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundColor"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.PlantListActivity">
+
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:fontFamily="@font/rajdhani_bold"
+        android:text="@string/plant_types"
+        android:textColor="@color/textColor"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@android:color/black" />
+
+
+    <ListView
+        android:id="@+id/listViewSeasonalPlants"
+        android:layout_width="match_parent"
+        android:scrollbarThumbVertical="@color/logout_icon_color"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/black"
+        android:dividerHeight="3dp"
+        android:isScrollContainer="true"
+        tools:listitem="@layout/plant_list_layout" />
+
+</LinearLayout>

@@ -1,0 +1,791 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context=".activities.CalendarActivity">
+
+    <Button
+        android:id="@+id/exitButton2"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:text="@string/exit"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/weekView"
+        app:layout_constraintEnd_toStartOf="@+id/datePicker"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.16" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button"
+        android:fontFamily="@font/rajdhani_semibold"
+        android:text="Update"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/weekView"
+        app:layout_constraintEnd_toStartOf="@+id/datePicker"
+        app:layout_constraintHorizontal_bias="0.301"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/exitButton2"
+        app:layout_constraintVertical_bias="0.47" />
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:background="@color/backgroundColor"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weekView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintVertical_bias="0.0">
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@color/register_color"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/sundayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/sun"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/sundayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/sundayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sundayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sundayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sundayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/sundayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider11"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/mondayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/mon"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/mondayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/mondayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mondayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mondayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mondayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/mondayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider12"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tuesdayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/tue"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tuesdayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider9"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/wednesdayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/wed"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/wednesdayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider10"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/thursdayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/thu"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/thursdayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/thursdayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/thursdayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/thursdayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/thursdayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/thursdayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider7"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/fridayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/fri"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/fridayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/fridayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fridayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@color/black_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fridayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@color/black_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fridayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/fridayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/divider8"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/saturdayTitle"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/sat"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/saturdayDate"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:textColor="#000000"
+                    android:textSize="22sp" />
+
+                <TextView
+                    android:id="@+id/saturdayData1"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/green_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@color/black_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/saturdayData2"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/yellow_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/saturdayData3"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/red_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/saturdayData4"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/text_color_2"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="#000000"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/saturdayData5"
+                    android:layout_width="57dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/blue_color"
+                    android:fontFamily="@font/rajdhani_bold"
+                    android:gravity="center"
+                    android:text="@string/_0"
+                    android:textColor="@color/black_color"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider13"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ListView
+        android:id="@+id/tasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/backgroundColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weekView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
